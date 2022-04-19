@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,25 +6,21 @@ import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angula
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
-  @ViewChild('show') show: ElementRef<any>;
   readContent: string = 'Read More...';
+  isReadMore: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  ngAfterViewInit() {
-    this.show.nativeElement.style.display = 'none';
+  showContent = () => {
+    this.isReadMore = false;
+    this.readContent = 'Read Less...';
   }
 
-  showContent = () => {
-    if(this.show.nativeElement.style.display === 'none') {
-      this.show.nativeElement.style.display = 'inline';
-      this.readContent = 'Read Less...';
-    } else {
-      this.show.nativeElement.style.display = 'none';
-      this.readContent = 'Read More...';
-    }
+  readLess = () => {
+    this.readContent = 'Read More...';
+    this.isReadMore = true;
   }
 
 }

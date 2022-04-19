@@ -17,6 +17,7 @@ import { ErrorComponent } from './components/pages/error/error.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { ClientsComponent } from './components/pages/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     ErrorComponent,
     PrivacyPolicyComponent,
     TermsConditionsComponent,
-    ContactComponent
+    ContactComponent,
+    ClientsComponent,
   ],
   imports: [
     BrowserModule,

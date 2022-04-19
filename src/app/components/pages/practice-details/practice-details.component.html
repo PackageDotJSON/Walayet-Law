@@ -2,12 +2,12 @@
     <div class="d-table">
         <div class="d-table-cell">
             <div class="page-title-text">
-                <h2>Practice Details</h2>
+                <h2>Practice Areas Details</h2>
 
                 <ul>
                     <li><a routerLink="/">Home</a></li>
                     <li><i class="icofont-simple-right"></i></li>
-                    <li>Practice Details</li>
+                    <li>Practice Areas Details</li>
                 </ul>
             </div>
         </div>
@@ -23,20 +23,30 @@
                         <div class="section-title text-start">
                             <h2>Alternate Dispute Resolution (ADR) and Arbitration</h2>
                         </div>
-                        <p> Dispute resolution is an indispensable process for making social
-                            life peaceful. Dispute resolution process tries to resolve and check
-                            conflicts, which enables persons and group to maintain co-operation. It
-                            can thus be alleged that it is the sin qua non of social life and security of
-                            the social order, without which it may be difficult for the individuals to
-                            carry on the life together. <br />
-                            
-                            Alternate Dispute Resolution (ADR) is a term used to describe
-                            several different modes of resolving legal disputes. It is experienced by
-                            the business world as well as common men that it is impracticable for
-                            many individuals to file law suits and get timely justice. The Courts are
-                            backlogged with dockets resulting in delay of year or more for the parties
-                            to have their cases heard and decided. To solve this problem of delayed
-                            justice ADR Mechanism has been developed in response thereof. 
+                        <p> Alternate Dispute Resolution(ADR) refers to any method of resolving disputes without
+                            litigation. We provide all kinds of services in Arbitration, ADR regroups, and all processes
+                            and techniques of conflict resolution that occur outside of any governmental authority. The most
+                            famous ADR methods are the following. Mediation, Arbitration, Conciliation, Negotiation and
+                            Transactions.
+                        </p>
+                        <b>DIFFERENT TYPES OF ARBITRATION: </b>
+                        <br /><br />
+                        <ul>
+                            <li>
+                                <b>National Arbitration: </b>for example, American arbitration, French arbitration, or German
+                                arbitration which are all governed by different rules enacted by the institutions of each country;
+                            </li>
+                            <li>
+                                <b>International commercial arbitration: </b>usually used to settle disputes that arise from
+                                commercial contractual relations between buyers and sellers who are in two different states; 
+                            </li>
+                            <li>
+                                <b>Investor-State arbitration: </b>unilateral referral by the private individual investors to an
+                                arbitral tribunal against a host State of their investment.
+                            </li>
+                        </ul>
+                        <p>Other types of arbitration and areas of specialization of this ADR exist, such as construction
+                            arbitration, post-M&A arbitration, etc.
                         </p>
                     </div>
 
@@ -168,6 +178,45 @@
                             the requirements of the Clients. 
                         </p>
                     </div>
+
+                    <div class="practice-details-content" *ngIf = "nameOfLaw === 'Family Law'">
+                        <div class="section-title text-start">
+                            <h2>Family and Custody Law</h2>
+                        </div>
+                        <p> Child welfare is the key factor taken into consideration by the court while granting custodial rights to any parent. Thus, aspects such as financial stability of parent, reported misconduct, character, and capacity of parent are given importance. </p>
+
+                        <p> The courts grant physical rights to one parent, however increased number of cases have seen shared legal responsibility and guardianship of any child(ren). Thus custodial laws in Pakistan can also be classified as physical and legal. </p>
+                            
+                        <p> According to the judicial system established in Pakistan, the legal right over minors implies that the parent is solely responsible for the welfare of the juvenile in question. </p>
+                            
+                        <p> While dealing with such issues, the court considers the preference of the minor in question, if he/she is old enough to form an intelligent preference. </p>
+                            
+                        <p> Traditionally in Pakistan, mothers were given ownership of minor, but the trend has been showing signs of change. More and more women are opting for career-driven lives, which may not enable them to bring up their children as a single parent. </p>
+                    </div>
+
+                    <div class="practice-details-content" *ngIf = "nameOfLaw === 'Criminal Law'">
+                        <div class="section-title text-start">
+                            <h2>Criminal Law</h2>
+                        </div>
+                        <p> The fundamentals of criminal law are based on the principle of justice, equity and good conscience. They provide adequate guidelines for the formulation of a rational penal policy. In order to be influential the criminal law must have four important elements, that is, politicality, specificity, uniformity and penal sanction. The functioning of the criminal justice system is wide enough to achieve its goals and objectives. Its ultimate goal is undoubtedly to make the society safer for its citizens. Most widely accepted aims of the criminal law include: </p>
+                        
+                        <ol>
+                            <li>The enforcement of criminal law should reflect the society’s disapprobation for criminal activity through apprehending, convicting and punishing the offenders.</li>
+                            
+                            <li>Deterring criminals from indulging in criminal activities and at the same advising the other people as to how to avoid falling a victim to a crime.</li>
+                            
+                            <li>Criminal law should be beneficially used to rehabilitate the offenders and incapacitating those who might otherwise prove to be a potential danger to the society.</li>
+                            
+                            <li>Ensuring safety and security of people through maintenance of law and order.</li>
+                            
+                            <li>Helping the victims to get adequate compensation from the offender wherever possible.</li>
+                            
+                            <li>Efficient and fair application of law ensuring proper treatment of suspects, defendants, those who are held in custody and witnesses. Also ensuring that the innocents are acquitted without harassment and guilty is duly punished.</li>
+                            
+                            <li>Ensuring that criminal justice system is accountable to the society.</li>
+                        </ol>
+                        
+                    </div>
                 </div>
 
                 
@@ -187,6 +236,8 @@
                             <li><a (click) = "nameOfLaw = 'Constitutional Law'" >Constitutional and Public Interest <i class="icofont-arrow-right"></i></a></li>
                             <li><a (click) = "nameOfLaw = 'Estate Law'" >Estate Planning <i class="icofont-arrow-right"></i></a></li>
                             <li><a (click) = "nameOfLaw = 'Advisory Law'" >Advisory and Transaction <i class="icofont-arrow-right"></i></a></li>
+                            <li><a (click) = "nameOfLaw = 'Family Law'" >Family and Custody Law <i class="icofont-arrow-right"></i></a></li>
+                            <li><a (click) = "nameOfLaw = 'Criminal Law'" >Criminal Law <i class="icofont-arrow-right"></i></a></li>
                         </ul>
                     </div>
 
@@ -196,7 +247,7 @@
                         <ul>
                             <li><i class="flaticon-call"></i> <a>Call : 009 231 000 222 72</a></li>
                             <li><i class="flaticon-email"></i> <a href="mailto:admin@walayetlaw.com">admin@walayetlaw.com</a></li>
-                            <li><i class="flaticon-pin"></i> Office No 03, Basement Sami Plaza, Opposite Lahore High Court, Rawalpindi Bench, Rawalpindi</li>
+                            <li><i class="flaticon-pin"></i> Office No 03, LG Sami Plaza, Opposite Lahore High Court, Rawalpindi Bench, Rawalpindi</li>
                         </ul>
                     </div>
 

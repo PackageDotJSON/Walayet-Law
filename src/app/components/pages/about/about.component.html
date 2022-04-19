@@ -30,14 +30,14 @@
                 <div class="help-item">
                     <div class="help-right">
                         <h2>We Provide Professional Attorneys to Assist You</h2>
-                        <p>Walayet & Associates (LLP®) aims to be the most innovative law firm by establishing long-term and friendly 
+                        <p style="margin-bottom:0;">Walayet & Associates (LLP®) aims to be the most innovative law firm by establishing long-term and friendly 
                             relationships with its valued clients, based on the principles of honesty, reciprocity, trust, and the highest 
                             standards of professional ethics. By adopting new and modern models for the delivery of legal services, we strive 
                             to redefine the role that a law firm and a lawyer play in an emerging market to achieve exceptional results for the 
                             clients. Walayet & Associates (LLP®) believes in absolute commitment to representing our client’s interests and takes 
                             pride in protecting our clients’ rights. Thorough legal research and case preparation, honest, dedicated advice, and experienced 
                             advocacy based on an in-depth knowledge of the law are the hallmarks of the Walayet & Associates (LLP®) team. The sole measures of 
-                            our success are concrete results and client satisfaction. The provision of a broad range of legal services </p><p (click)="showContent()" style="cursor: pointer;">{{readContent}}</p> <p #show>to such a diverse clientele 
+                            our success are concrete results and client satisfaction. The provision of a broad range of legal services </p><span class="custom-pointer" *ngIf = "isReadMore" (click)="showContent()">{{readContent}}</span><p *ngIf = "!isReadMore" style="margin : 0; padding-top:0;">to such a diverse clientele 
                             allows us to bring innovations towards solving complex legal issues. The solutions we provide to our clients are comprehensive, innovative, 
                             and most importantly viable. Walayet & Associates (LLP®) has the expertise in all types of Alternate Dispute Resolutions, Arbitration Matters, 
                             litigation, from Civil Court to the Honourable Supreme Court of Pakistan also in Courts and Tribunals governed under the special laws, including 
@@ -47,6 +47,7 @@
                             Another area of our expertise is Taxation Laws as Walayet & Associates (LLP®) has a best-experienced team for Income Tax Filing, Sales Tax Filing, 
                             and Replies of Notices of FBR, Filing of Appeals before Commissioners and Appellate Tribunal, and filing of Writ Petitions in High Court. 
                             This blend of the exceptionally trained and experienced team coupled with an in-depth knowledge of the laws places us in a unique position in the market.</p>
+                            <span class="custom-pointer" (click)="readLess()" *ngIf = "!isReadMore">{{readContent}}</span>
 
                         <br />
                         <div class="help-inner-left">
@@ -68,9 +69,9 @@
                             <img src="assets/img/about/sign.png" alt="Signature" height="130px">
                         </div>
 
-                        <h3>MALIK KHALID MEHMOOD WALAYET </h3>
+                        <!-- <h3>MALIK KHALID MEHMOOD WALAYET </h3>
                         <span>FOUNDING PARTNER</span>
-                        <br />
+                        <br /> -->
                         <h3>MALIK SAQIB MEHMOOD KHALID</h3>
                         <span>PARTNER</span>
                     </div>
