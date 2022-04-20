@@ -136,26 +136,22 @@
                 </div>
             </div>
         </div>
-
-            <div class="row">
-               <div class="expertise-item wow fadeInUp" data-wow-delay=".3s" style="border-bottom: 100px;"> 
-                    <img src="assets/img/clients/wah.png" alt="sc" height="70px">
-                    <img src="assets/img/clients/ogdcl.png" alt="ogdcl" height="100px">
-                    <img src="assets/img/clients/ztbl.png" alt="ztbl" height="70px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/sc.png" alt="sc" height="70px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/caa.png" alt="caa" height="100px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/pta.png" alt="pta" height="70px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/nepra.png" alt="nepra" height="100px">
-                    <img src="assets/img/clients/nha.png" alt="nha" height="90px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/fwo.jpeg" alt="fwo" height="100px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/rc.jpg" alt="rc" height="100px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/metro.png" alt="metro" height="70px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/petro.jpg" alt="petro" height="90px">
-                    <img style="margin-left: 30px;" src="assets/img/clients/amson.png" alt="amson" height="90px">
-               </div>
-            </div>
-        <div class="help-area"></div>
     </div>
+
+    <div class="custom-carousel expertise-item wow fadeInUp">
+        <owl-carousel
+            [options]="{items: 3, dots: true, navigation: true}"
+            [items]="images"
+            [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let image of images; let i = index">
+                <div class="thumbnail-image">
+                    <img [src]="image" height="220px"/>
+                </div>
+            </div>
+        </owl-carousel>
+    </div>
+
+    <div class="help-area"></div>
 </section>
 
 <div class="contact-form pb-100">

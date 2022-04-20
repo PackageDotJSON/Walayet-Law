@@ -18,6 +18,7 @@ import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privac
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ClientsComponent } from './components/pages/clients/clients.component';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ClientsComponent } from './components/pages/clients/clients.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

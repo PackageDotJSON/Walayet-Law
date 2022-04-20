@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+var $: any;
 
 @Component({
   selector: 'app-clients',
