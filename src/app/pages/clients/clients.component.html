@@ -1,0 +1,103 @@
+<div class="page-title-area page-title-area-three title-img-one">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="page-title-text">
+                <h2>Our Valuable Clients</h2>
+                <ul>
+                    <li><a routerLink="/">Home</a></li>
+                    <li><i class="icofont-simple-right"></i></li>
+                    <li>Our Valuable Clients</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="practice-details-area pt-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="section-title text-start">
+                    <h2>List Of Our Clients</h2>
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
+            
+            <tbody>
+                <tr>
+                    <td>Madina Group of Companies</td>
+                    <td>Pakistan Red Crescent Society</td>
+                    <td>Petrosin Group of Companies</td>
+                    <td>Metro (Private) Limited</td>
+                    <td>Amson Vaccines and Pharma (Private) Limited</td>
+                </tr>
+            </tbody>
+            <br />
+
+           
+            <tbody>
+                <tr>
+                    <td>Civil Aviation Authority</td>
+                    <td>Pakistan Telecommunication Authority</td>
+                    <td>National Electric Power Regulatory Authority</td>
+                    <td>Pakistan Tobacco Board</td>
+                    <td>National Highway Authority</td>
+                </tr>
+            </tbody>
+
+            <br />
+
+           
+            <tbody>
+                <tr>
+                    <td>Frontier Works Organization</td>
+                    <td>Allied Developers (Private) Limited</td>
+                    <td>Janjua Builders Pvt. Limited</td>
+                    <td>Pakistan LNG Terminals Limited</td>
+                    <td>Government Honding (Private) Limited</td>
+                </tr>
+            </tbody>
+
+            <br />
+
+           
+            <tbody>
+                <tr>
+                    <td>Oil and Gas Development Company Limited (OGDCL)</td>
+                    <td>J.W Tech (Private) Limited</td>
+                    <td>Haier Mobile</td>
+                    <td>We.r.Play (Private) Limited</td>
+                    <td>Pakistan Ordnance Factories</td>
+                </tr>
+            </tbody>
+
+            <br />
+
+            <tbody>
+                <tr>
+                    <td>Wah Industries Limited</td>
+                    <td>Standard Chartered Bank Limited</td>
+                    <td>Zarai Taraqiati Bank Limited</td>
+                </tr>
+            </tbody>
+            <br />
+        </table>
+
+        <br />
+        <div class="row align-items-start">
+            <ng-container *ngFor = "let image of images; let index = i">
+                <div class="col-6 col-sm-4">
+                    <div class="card" style="width: 18rem; margin-top: 7%; border: none;">
+                        <img [src]=image class="card-img-top" [alt]="index" height="100px">
+                    </div>        
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="help-area"></div>
+
+    </div>
+
+</section>

@@ -1,24 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeOneComponent } from './components/pages/home-one/home-one.component';
-import { NavbarComponent } from './components/layouts/navbar/navbar.component';
-import { FooterComponent } from './components/layouts/footer/footer.component';
-import { PreloaderComponent } from './components/layouts/preloader/preloader.component';
-import { AboutComponent } from './components/pages/about/about.component';
-import { AttorneyComponent } from './components/pages/attorney/attorney.component';
-import { AttorneyDetailsComponent } from './components/pages/attorney-details/attorney-details.component';
-import { PracticeComponent } from './components/pages/practice/practice.component';
-import { PracticeDetailsComponent } from './components/pages/practice-details/practice-details.component';
-import { AppointmentComponent } from './components/pages/appointment/appointment.component';
-import { ErrorComponent } from './components/pages/error/error.component';
-import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
-import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
-import { ContactComponent } from './components/pages/contact/contact.component';
-import { ClientsComponent } from './components/pages/clients/clients.component';
 import { OwlModule } from 'ngx-owl-carousel';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+import { HomeOneComponent } from './pages/home-one/home-one.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AttorneyComponent } from './pages/attorney/attorney.component';
+import { AttorneyDetailsComponent } from './pages/attorney-details/attorney-details.component';
+import { PracticeComponent } from './pages/practice/practice.component';
+import { PracticeDetailsComponent } from './pages/practice-details/practice-details.component';
+import { AppointmentComponent } from './pages/appointment/appointment.component';
+import { ErrorComponent } from './pages/error/error.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+
 
 @NgModule({
   declarations: [
@@ -38,10 +42,13 @@ import { OwlModule } from 'ngx-owl-carousel';
     TermsConditionsComponent,
     ContactComponent,
     ClientsComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     OwlModule
   ],
   providers: [],
