@@ -4,9 +4,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const http = require('http');
 const path = require('path');
+const env = require('dotenv');
 const nodemailer = require("nodemailer");
 
 const app = express();
+
+env.config();
 
 const router = express.Router();
 
@@ -30,6 +33,8 @@ router.post('/api/getContactData', (req, res) => {
     if(req.body.contactForm){
         console.log(req.body.contactForm);
     }
+
+    main().catch(console.error);
 });
 
 async function main() {
@@ -39,22 +44,22 @@ async function main() {
   
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
+      host: "mail.walayetlaw.com",
+      port: 465,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: testAccount.user, // generated ethereal user
-        pass: testAccount.pass, // generated ethereal password
+        user: 'admin@walayetlaw.com', // generated ethereal user
+        pass: 'Saqibmalik@1991', // generated ethereal password
       },
     });
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Fred Foo 👻" <foo@example.com>', // sender address
-      to: "muhammad.hassan@secp.gov.pk", // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: "Hello world?", // plain text body
-      html: "<b>Hello world?</b>", // html body
+      from: '"do not reply" <admin@alayetlaw.com>', // sender address
+      to: "kiyani1995@gmail.com", // list of receivers
+      subject: "Hello", // Subject line
+      text: "this is a test mail", // plain text body
+      html: "<b>this is a test mail</b>", // html body
     });
   
     console.log("Message sent: %s", info.messageId);
@@ -64,13 +69,11 @@ async function main() {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
   }
-  
-  main().catch(console.error);
 
 app.use(router);
 
-const port = 3000;
-const address = '0.0.0.0';
+const port = process.env.PORT;
+const address = process.env.ADDRESS;
 
 // const server = http.createServer(app);
 
