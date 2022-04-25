@@ -29,37 +29,35 @@ router.post('/api/getReachMeBackData', (req, res) => {
     }
 });
 
-router.post('/api/getContactData', (req, res) => {
+router.post('/api/getContactData', async (req, res) => {
     if(req.body.contactForm){
-        console.log(req.body.contactForm);
+        const response = await main(req.body.contactForm);
+        res.send(response);
     }
-
-    main().catch(console.error);
 });
 
-async function main() {
+async function main(form) {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
     let testAccount = await nodemailer.createTestAccount();
-  
+    console.log(process.env.HOST, process.env.USER_NAME, process.env.PASSWORD);
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: "mail.walayetlaw.com",
+      host: process.env.HOST,
       port: 465,
-      secure: false, // true for 465, false for other ports
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: 'admin@walayetlaw.com', // generated ethereal user
-        pass: 'Saqibmalik@1991', // generated ethereal password
+        user: process.env.USER_NAME, // generated ethereal user
+        pass: process.env.PASSWORD, // generated ethereal password
       },
     });
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"do not reply" <admin@alayetlaw.com>', // sender address
-      to: "kiyani1995@gmail.com", // list of receivers
-      subject: "Hello", // Subject line
-      text: "this is a test mail", // plain text body
-      html: "<b>this is a test mail</b>", // html body
+      from: `${form.userName} <${form.userEmail}>`, // sender address
+      to: process.env.USER_NAME, // list of receivers
+      subject: form.userSubject, // Subject line
+      text: `userPhone: ${form.userPhone} ${form.caseDescription}`, // plain text body
     });
   
     console.log("Message sent: %s", info.messageId);
@@ -68,6 +66,24 @@ async function main() {
     // Preview only available when sending through an Ethereal account
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+
+    let responseData;
+    if(info.messageId !== null && info.messageId !== undefined) {
+      responseData = {
+        data: [],
+        statusCode: 200,
+        message: 'Email sent successfully',
+        error: false
+      }
+    } else {
+      responseData = {
+        data: [],
+        statusCode: 500,
+        message: 'Incorrect email entered',
+        error: true
+      }
+    }
+    return responseData;
   }
 
 app.use(router);

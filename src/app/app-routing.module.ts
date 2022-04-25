@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeOneComponent } from './pages/home-one/home-one.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AttorneyComponent } from './pages/attorney/attorney.component';
-import { AttorneyDetailsComponent } from './pages/attorney-details/attorney-details.component';
 import { PracticeComponent } from './pages/practice/practice.component';
 import { PracticeDetailsComponent } from './pages/practice-details/practice-details.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
@@ -17,7 +16,6 @@ const routes: Routes = [
     {path: '', component: HomeOneComponent},
     {path: 'about', component: AboutComponent},
     {path: 'attorney', component: AttorneyComponent},
-    {path: 'attorney-details', component: AttorneyDetailsComponent},
     {path: 'practice', component: PracticeComponent},
     {path: 'practice-details', component: PracticeDetailsComponent},
     {path: 'appointment', component: AppointmentComponent},

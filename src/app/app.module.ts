@@ -12,7 +12,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AttorneyComponent } from './pages/attorney/attorney.component';
-import { AttorneyDetailsComponent } from './pages/attorney-details/attorney-details.component';
 import { PracticeComponent } from './pages/practice/practice.component';
 import { PracticeDetailsComponent } from './pages/practice-details/practice-details.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
@@ -33,7 +32,6 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     PreloaderComponent,
     AboutComponent,
     AttorneyComponent,
-    AttorneyDetailsComponent,
     PracticeComponent,
     PracticeDetailsComponent,
     AppointmentComponent,
