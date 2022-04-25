@@ -50,3 +50,4 @@ export class AppComponent implements OnInit {
 
 //remove saqiba basharat
 //liasion office
+//add gallery
