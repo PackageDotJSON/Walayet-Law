@@ -17,7 +17,6 @@ import { PracticeDetailsComponent } from './pages/practice-details/practice-deta
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
@@ -39,7 +38,6 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     AppointmentComponent,
     ErrorComponent,
     PrivacyPolicyComponent,
-    TermsConditionsComponent,
     ContactComponent,
     ClientsComponent,
     ContactFormComponent,
