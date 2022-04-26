@@ -22,7 +22,7 @@
                     <img src="assets/img/home-one/team/1.jpg" alt="Team">
 
                     <div class="team-inner">
-                        <h3><a>Malik Khalid Mehmood Walayet</a></h3>
+                        <h3><a (click)="isValid = true; attorney = 'Malik Khalid Mehmood Walayet'" style="cursor: pointer;">Malik Khalid Mehmood Walayet</a></h3>
                         <span>Founding Partner</span>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <img src="assets/img/home-one/team/2.jpg" alt="Team">
                     
                     <div class="team-inner">
-                        <h3><a>Malik Saqib Mehmood Khalid (AHC)</a></h3>
+                        <h3><a (click)="isValid = true; attorney = 'Malik Saqib Mehmood Khalid (AHC)'" style="cursor: pointer;">Malik Saqib Mehmood Khalid (AHC)</a></h3>
                         <span>Partner</span>
                     </div>
                 </div>
@@ -165,3 +165,6 @@
         
     </div>
 </section>
+
+<app-attorney-details *ngIf = "isValid" (isModalClosed)="closeModal($event)" [attorneyDetails]="attorney"></app-attorney-details>
+

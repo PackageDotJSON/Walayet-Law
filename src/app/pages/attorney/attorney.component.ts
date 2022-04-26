@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttorneyComponent implements OnInit {
 
+  isValid = false;
+  attorney: string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeModal(modalCondition) {
+    this.isValid = !modalCondition;
   }
 
 }

@@ -21,6 +21,8 @@ import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditi
 import { ContactComponent } from './pages/contact/contact.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AttorneyDetailsComponent } from './components/attorney-details/attorney-details.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     ContactComponent,
     ClientsComponent,
     ContactFormComponent,
+    AttorneyDetailsComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

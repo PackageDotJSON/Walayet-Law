@@ -23,9 +23,10 @@ const router = express.Router();
 app.use(cors());
 app.use(bodyParser.json());
 
-router.post('/api/getReachMeBackData', (req, res) => {
+router.post('/api/getReachMeBackData', async (req, res) => {
     if(req.body.phoneNumber) {
-        console.log(req.body.phoneNumber);
+        const response = await main(req.body.phoneNumber);
+        res.send(response);
     }
 });
 
@@ -40,7 +41,7 @@ async function main(form) {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
     let testAccount = await nodemailer.createTestAccount();
-    console.log(process.env.HOST, process.env.USER_NAME, process.env.PASSWORD);
+
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       host: process.env.HOST,
@@ -51,14 +52,26 @@ async function main(form) {
         pass: process.env.PASSWORD, // generated ethereal password
       },
     });
-  
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-      from: `${form.userName} <${form.userEmail}>`, // sender address
-      to: process.env.USER_NAME, // list of receivers
-      subject: form.userSubject, // Subject line
-      text: `userPhone: ${form.userPhone} ${form.caseDescription}`, // plain text body
-    });
+    
+    let info;
+
+    if(form.userName !== undefined) {
+        // send mail with defined transport object
+        info = await transporter.sendMail({
+        from: `${form.userName} <${form.userEmail}>`, // sender address
+        to: process.env.USER_NAME, // list of receivers
+        subject: form.userSubject, // Subject line
+        text: `userPhone: ${form.userPhone} ${form.caseDescription}`, // plain text body
+      });
+    } else {
+        // send mail with defined transport object
+        info = await transporter.sendMail({
+        from: 'do-not reply <admin@walayetlaw.com>', // sender address
+        to: process.env.USER_NAME, // list of receivers
+        subject: 'No Subject', // Subject line
+        text: `userPhone: ${form} It is requested to reach me back.`, // plain text body
+      });
+    }
   
     console.log("Message sent: %s", info.messageId);
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>

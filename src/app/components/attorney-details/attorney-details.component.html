@@ -1,0 +1,92 @@
+<button
+    #modalTriggerButton
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+>
+    Launch Modal
+</button>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    Attorney Detail
+                </h5>
+            </div>
+
+            <div class="modal-body">
+                <ng-container
+                    *ngIf="attorneyDetails === 'Malik Khalid Mehmood Walayet'"
+                >
+                    <b>Mr. Malik Khalid Mehmood Walayet</b> was born on the 5th
+                    of October 1960. He took his High School Education in
+                    Lahore, in the year 1977, and he joined M/S Sardar Iqbal &
+                    Co. Lahore as Research Associate for two years. He joined
+                    the Lahore High Court Establishment in the year 1978 and he
+                    served for more than 41 years. On his superannuation, he was
+                    serving as Deputy Registrar at Lahore High Court Rawalpindi
+                    Bench. He qualified for his law degree in the year 1991. He
+                    has a handsome experience in dealing the service-related
+                    cases for the Governmental institutions as well as private.
+                    He also remained as an associate to represent Lahore Hight
+                    Court before the August Supreme Court in the cases by High
+                    Court and vice versa. He remained a key officer on the
+                    General Administration side in the Lahore High Court and a
+                    helpful officer to his senior Additional Registrars at the
+                    Bench. Now he is a Founding member of the Firm and is
+                    currently working as a Senior Consultant on Civil Side as
+                    well as a Corporate Counsellor.
+                </ng-container>
+                <ng-container
+                    *ngIf="
+                        attorneyDetails === 'Malik Saqib Mehmood Khalid (AHC)'
+                    "
+                >
+                    <b>Mr. Malik Saqib Mehmood Khalid (Advocate High Court)</b>
+                    is a Partner in Walayet & Associates (LLP®), earned his B.A.
+                    from the university of the Punjab Lahore, and LLB from
+                    International Islamic University Islamabad, Mr. Malik draws
+                    on his experience in the United Arab Emirates at the Law
+                    Firm Al Meezan Debit Collection Abu Dhabi & Dubai UAE. He is
+                    also licensed to appear before the Courts of Pakistan. He
+                    developed a deep understanding of Civil Commercial
+                    litigation so that the best services could be provided to
+                    the clients. He represented
+                    <b
+                        >National Highway Authority (NHA), Federal Government
+                        Employees Housing Authority (FGEHA), Army Welfare Trust
+                        (AWT), Pakistan Ordnance Factories (POF), Wah Industries
+                        Limited (WIL) </b
+                    >, etc, in different Arbitration matters. Civil and
+                    Commercial Litigation. He also represented Government
+                    Organizations, Semi-Government Organizations, Private
+                    Limited Companies, and many individual clients in more than
+                    100 cases before different Courts and Tribunals.
+                </ng-container>
+            </div>
+
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    (click)="modalClosed(true)"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
