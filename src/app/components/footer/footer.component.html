@@ -87,11 +87,16 @@
 
                 <div class="col-sm-5 col-lg-6">
                     <div class="copyright-item copyright-right">
-                        <a routerLink="/terms-conditions">Terms & Conditions</a> <span>-</span>
                         <a routerLink="/privacy-policy">Privacy Policy</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="text-center" *ngIf="isLoading">
+        <div class="spinner-border text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 </footer>

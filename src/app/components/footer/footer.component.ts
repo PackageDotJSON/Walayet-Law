@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { tap } from 'rxjs/operators';
 import { ContactService } from 'src/app/services/contact.service';
+import Swal from 'bootstrap-sweetalert';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +13,7 @@ export class FooterComponent {
 
   phoneNumber: number;
   isInValid = false;
+  isLoading = false;
 
   constructor(private router: Router, private contactService: ContactService) { }
 
@@ -25,7 +28,10 @@ export class FooterComponent {
       return;
     }
     this.isInValid = false;
-    this.contactService.sendPhoneNumber(this.phoneNumber).subscribe(res => console.log(res));
+    this.contactService.sendPhoneNumber(this.phoneNumber).pipe(tap((res) => {
+      res.statusCode === 200 ? Swal('Success', res.message, 'success'): Swal('Danger', res.message, 'danger');
+        this.isLoading = false;
+    })).subscribe();
   }
 
 }
