@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
   selector: 'app-practice',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class PracticeComponent implements OnInit {
 
+  readonly homeUrl = ROUTE_URLS.HOME_URL;
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {

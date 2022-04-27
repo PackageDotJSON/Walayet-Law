@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
   selector: 'app-attorney',
@@ -9,6 +10,7 @@ export class AttorneyComponent implements OnInit {
 
   isValid = false;
   attorney: string;
+  readonly homeUrl = ROUTE_URLS.HOME_URL;
 
   constructor() { }
 

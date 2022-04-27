@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 import { IMAGES } from '../../settings/app.settings';
 
 @Component({
@@ -8,6 +9,11 @@ import { IMAGES } from '../../settings/app.settings';
 })
 export class HomeOneComponent implements OnInit {
 
+  readonly routesUrl = {
+    practiceUrl: ROUTE_URLS.PRACTICE_URL,
+    appointmentUrl: ROUTE_URLS.APPOINTMENT_URL
+  };
+  
   images = IMAGES;
   constructor() { }
 

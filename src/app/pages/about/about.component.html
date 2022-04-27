@@ -5,13 +5,13 @@
                 <h2>About Our Firm and History</h2>
 
                 <ul>
-                    <li><a routerLink="/">Home</a></li>
+                    <li><a [routerLink]="routeUrls.homeUrl">Home</a></li>
                     <li><i class="icofont-simple-right"></i></li>
                     <li>About Us</li>
                 </ul>
 
                 <div class="page-title-btn">
-                    <a routerLink="/practice">ALL PRACTICES<i class="icofont-arrow-right"></i></a>
+                    <a [routerLink]="routeUrls.practiceUrl">ALL PRACTICES<i class="icofont-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                             </ul>
                         </div>
 
-                        <a class="cmn-btn" routerLink="/practice">Learn More</a>
+                        <a class="cmn-btn" [routerLink]="routeUrls.practiceUrl">Learn More</a>
                     </div>
                 </div>
             </div>

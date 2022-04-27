@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { BASE_URL } from "../constants/base-url.constant";
-import { API_URL } from "../enums/api-url.enum";
+import { API_URL } from "../enums/api-urls.enum";
 import { Contact } from "../models/contact.model";
 import { Response } from "../models/response.model";
 

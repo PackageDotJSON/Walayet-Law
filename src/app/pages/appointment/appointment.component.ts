@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
   selector: 'app-appointment',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentComponent implements OnInit {
 
+  readonly homeUrl = ROUTE_URLS.HOME_URL;
   constructor() { }
 
   ngOnInit(): void {

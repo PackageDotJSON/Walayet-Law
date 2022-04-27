@@ -53,10 +53,10 @@
                         <h3>Quick Links</h3>
 
                         <ul>
-                            <li><a routerLink="/"><i class="icofont-simple-right"></i> Home</a></li>
-                            <li><a routerLink="about"><i class="icofont-simple-right"></i> About Us</a></li>
-                            <li><a routerLink="attorney"><i class="icofont-simple-right"></i> Team</a></li>
-                            <li><a routerLink="appointment"><i class="icofont-simple-right"></i> Appointment</a></li>
+                            <li><a [routerLink]="routesUrl.homeUrl"><i class="icofont-simple-right"></i> Home</a></li>
+                            <li><a [routerLink]="routesUrl.aboutUrl"><i class="icofont-simple-right"></i> About Us</a></li>
+                            <li><a [routerLink]="routesUrl.attorneyUrl"><i class="icofont-simple-right"></i> Team</a></li>
+                            <li><a [routerLink]="routesUrl.appointmentUrl"><i class="icofont-simple-right"></i> Appointment</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
 
                 <div class="col-sm-5 col-lg-6">
                     <div class="copyright-item copyright-right">
-                        <a routerLink="/privacy-policy">Privacy Policy</a>
+                        <a [routerLink]="routesUrl.privacyPolicyUrl">Privacy Policy</a>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@
                             <div class="banner-left">
                                 <h1>Attorneys Fight For Your Justice</h1>
                                 <p>Our Professional Attorneys are devoted to your Progress & to achieve your Goal. Our Law Firm supports our clients for various versatile cases and to get justice.</p>
-                                <a routerLink="/appointment">FREE CONSULTATION <i class="icofont-arrow-right"></i></a>
+                                <a [routerLink]="routesUrl.appointmentUrl">FREE CONSULTATION <i class="icofont-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <img src="assets/img/about/sign.png" alt="Signature" height="130px">
                         </div>
 
-                        <a class="cmn-btn" routerLink="/practice">Learn More</a>
+                        <a class="cmn-btn" [routerLink]="routesUrl.practiceUrl">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
 
     <div class="custom-carousel expertise-item wow fadeInUp">
         <owl-carousel
-            [options]="{items: 3, dots: true, navigation: true}"
+            [options]="{items: 3, dots: true, navigation: true, autoplay:true, autoplayTimeout:1000, autoplayHoverPause:true, loop: true}"
             [items]="images"
             [carouselClasses]="['owl-theme', 'row', 'sliding']">
             <div class="item" *ngFor="let image of images; let i = index">

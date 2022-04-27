@@ -17,36 +17,36 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a>
+                            <a [routerLink]="routesUrl.homeUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a>
                         </li>
 
-                        <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About</a></li>
+                        <li class="nav-item"><a [routerLink]="routesUrl.aboutUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About</a></li>
 
-                        <li class="nav-item"><a routerLink="/clients" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Our Valuable Clients</a></li>
+                        <li class="nav-item"><a [routerLink]="routesUrl.clientsUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Our Valuable Clients</a></li>
 
-                        <li class="nav-item"><a routerLink="/attorney" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Attorneys</a></li>
+                        <li class="nav-item"><a [routerLink]="routesUrl.attorneyUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Attorneys</a></li>
 
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link dropdown-toggle">More</a>
 
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/practice" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Practice Areas</a></li>
+                                <li class="nav-item"><a [routerLink]="routesUrl.practiceUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Practice Areas</a></li>
 
-                                <li class="nav-item"><a routerLink="/practice-details" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Practice Areas Details</a></li>
+                                <li class="nav-item"><a [routerLink]="routesUrl.practiceDetailsUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Practice Areas Details</a></li>
 
-                                <li class="nav-item"><a routerLink="/appointment" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Appointment</a></li>
+                                <li class="nav-item"><a [routerLink]="routesUrl.appointmentUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Appointment</a></li>
 
-                                <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
+                                <li class="nav-item"><a [routerLink]="routesUrl.galleryUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
 
-                                <li class="nav-item"><a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Privacy Policy</a></li>
+                                <li class="nav-item"><a [routerLink]="routesUrl.privacyPolicyUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Privacy Policy</a></li>
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a routerLink="contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contact</a></li>
+                        <li class="nav-item"><a [routerLink]="routesUrl.contactUrl" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contact</a></li>
                     </ul>
 
                     <div class="side-nav">
-                        <a routerLink="/appointment">Get Appointment</a>
+                        <a [routerLink]="routesUrl.appointmentUrl">Get Appointment</a>
                     </div>
                 </div>
             </nav>

@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
 import { OwlModule } from 'ngx-owl-carousel';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
+import { routes } from './routes/routes';
 
 import { AppComponent } from './app.component';
 import { HomeOneComponent } from './pages/home-one/home-one.component';
@@ -46,7 +48,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     FormsModule,
     HttpClientModule,
     OwlModule

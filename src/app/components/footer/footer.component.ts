@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { ContactService } from 'src/app/services/contact.service';
 import Swal from 'bootstrap-sweetalert';
+import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +12,14 @@ import Swal from 'bootstrap-sweetalert';
 })
 export class FooterComponent {
 
+  readonly routesUrl = {
+    homeUrl: ROUTE_URLS.HOME_URL,
+    aboutUrl: ROUTE_URLS.ABOUT_URL,
+    attorneyUrl: ROUTE_URLS.ATTORNEY_URL,
+    appointmentUrl: ROUTE_URLS.APPOINTMENT_URL,
+    privacyPolicyUrl: ROUTE_URLS.PRIVACY_POLICY_URL
+  };
+
   phoneNumber: number;
   isInValid = false;
   isLoading = false;
@@ -18,7 +27,7 @@ export class FooterComponent {
   constructor(private router: Router, private contactService: ContactService) { }
 
   navigateToDetails(law) {
-    this.router.navigateByUrl('/practice-details', {state: {name: law}})
+    this.router.navigateByUrl(ROUTE_URLS.PRACTICE_DETAILS_URL, {state: {name: law}});
   }
 
   reachMeBack() {
