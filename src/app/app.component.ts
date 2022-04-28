@@ -49,9 +49,5 @@ export class AppComponent implements OnInit {
 
 
 //khalid sahab
-//usama sahab down
-//zaeem sahab add
 //saqiba sahaba picture change
 //rauf sahab image set
-// set form
-// set names of attorneys

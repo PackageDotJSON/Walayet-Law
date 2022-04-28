@@ -18,3 +18,9 @@ input[type=number] {
 button {
   cursor: pointer;
 }
+input[type="text"], input[type="email"], input[type="number"]{
+    font-size: 17px !important;
+}
+textarea{
+  font-size: 17px !important;
+}
