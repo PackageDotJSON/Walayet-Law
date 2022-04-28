@@ -16,7 +16,7 @@ export class FooterComponent {
     homeUrl: ROUTE_URLS.HOME_URL,
     aboutUrl: ROUTE_URLS.ABOUT_URL,
     attorneyUrl: ROUTE_URLS.ATTORNEY_URL,
-    appointmentUrl: ROUTE_URLS.APPOINTMENT_URL,
+    contactUrl: ROUTE_URLS.CONTACT_URL,
     privacyPolicyUrl: ROUTE_URLS.PRIVACY_POLICY_URL
   };
 
