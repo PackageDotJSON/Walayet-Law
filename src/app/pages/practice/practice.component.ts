@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
@@ -7,17 +7,12 @@ import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
   templateUrl: './practice.component.html',
   styleUrls: ['./practice.component.scss']
 })
-export class PracticeComponent implements OnInit {
-
+export class PracticeComponent {
   readonly homeUrl = ROUTE_URLS.HOME_URL;
-  
+
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
   navigateToDetails(law) {
-    this.router.navigateByUrl('/practice-details', {state: {name: law}})
+    this.router.navigateByUrl('/practice-details', {state: {name: law}});
   }
-
 }

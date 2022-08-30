@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
@@ -6,12 +6,6 @@ import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss']
 })
-export class PrivacyPolicyComponent implements OnInit {
-
+export class PrivacyPolicyComponent {
   readonly homeUrl = ROUTE_URLS.HOME_URL;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

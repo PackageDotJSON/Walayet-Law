@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 import { IMAGES } from '../../settings/app.settings';
 
@@ -7,13 +7,7 @@ import { IMAGES } from '../../settings/app.settings';
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
-export class ClientsComponent implements OnInit {
-
+export class ClientsComponent {
   readonly homeUrl = ROUTE_URLS.HOME_URL;
   images = IMAGES;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -7,7 +7,6 @@ import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-
   readonly routesUrl = {
     homeUrl : ROUTE_URLS.HOME_URL,
     aboutUrl : ROUTE_URLS.ABOUT_URL,

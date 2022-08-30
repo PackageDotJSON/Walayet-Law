@@ -1,15 +1,15 @@
-import { Routes } from "@angular/router";
-import { AboutComponent } from "../pages/about/about.component";
-import { AppointmentComponent } from "../pages/appointment/appointment.component";
-import { AttorneyComponent } from "../pages/attorney/attorney.component";
-import { ClientsComponent } from "../pages/clients/clients.component";
-import { ContactComponent } from "../pages/contact/contact.component";
-import { ErrorComponent } from "../pages/error/error.component";
-import { GalleryComponent } from "../pages/gallery/gallery.component";
-import { HomeOneComponent } from "../pages/home-one/home-one.component";
-import { PracticeDetailsComponent } from "../pages/practice-details/practice-details.component";
-import { PracticeComponent } from "../pages/practice/practice.component";
-import { PrivacyPolicyComponent } from "../pages/privacy-policy/privacy-policy.component";
+import { Routes } from '@angular/router';
+import { AboutComponent } from '../pages/about/about.component';
+import { AppointmentComponent } from '../pages/appointment/appointment.component';
+import { AttorneyComponent } from '../pages/attorney/attorney.component';
+import { ClientsComponent } from '../pages/clients/clients.component';
+import { ContactComponent } from '../pages/contact/contact.component';
+import { ErrorComponent } from '../pages/error/error.component';
+import { GalleryComponent } from '../pages/gallery/gallery.component';
+import { HomeOneComponent } from '../pages/home-one/home-one.component';
+import { PracticeDetailsComponent } from '../pages/practice-details/practice-details.component';
+import { PracticeComponent } from '../pages/practice/practice.component';
+import { PrivacyPolicyComponent } from '../pages/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
     {path: '', component: HomeOneComponent},

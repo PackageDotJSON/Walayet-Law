@@ -10,8 +10,6 @@ export class AttorneyDetailsComponent implements AfterViewInit {
   @Output() isModalClosed = new EventEmitter<boolean>();
   @ViewChild('modalTriggerButton') modalTriggerButton: ElementRef<any>;
 
-  constructor() {}
-
   ngAfterViewInit() {
     this.modalTriggerButton.nativeElement.click();
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
 
 @Component({
@@ -6,19 +6,12 @@ import { ROUTE_URLS } from 'src/app/enums/route-urls.enum';
   templateUrl: './attorney.component.html',
   styleUrls: ['./attorney.component.scss']
 })
-export class AttorneyComponent implements OnInit {
-
+export class AttorneyComponent {
   isValid = false;
   attorney: string;
   readonly homeUrl = ROUTE_URLS.HOME_URL;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   closeModal(modalCondition) {
     this.isValid = !modalCondition;
   }
-
 }

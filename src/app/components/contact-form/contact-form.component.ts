@@ -17,7 +17,7 @@ export class ContactFormComponent {
   sendContactForm(f: NgForm) {
     this.isLoading = true;
     this.contactService.sendContactForm(f.value).pipe(tap((res) => {
-        res.statusCode === 200 ? Swal('Success', res.message, 'success'): Swal('Danger', res.message, 'danger');
+        res.statusCode === 200 ? Swal('Success', res.message, 'success') : Swal('Danger', res.message, 'danger');
         this.isLoading = false;
     })).subscribe();
   }

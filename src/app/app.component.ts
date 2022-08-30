@@ -46,8 +46,3 @@ export class AppComponent implements OnInit {
         });
     }
 }
-
-
-//khalid sahab
-//saqiba sahaba picture change
-//rauf sahab image set
