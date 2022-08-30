@@ -16,7 +16,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { AttorneyComponent } from './pages/attorney/attorney.component';
 import { PracticeComponent } from './pages/practice/practice.component';
 import { PracticeDetailsComponent } from './pages/practice-details/practice-details.component';
-import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -37,7 +36,6 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     AttorneyComponent,
     PracticeComponent,
     PracticeDetailsComponent,
-    AppointmentComponent,
     ErrorComponent,
     PrivacyPolicyComponent,
     ContactComponent,

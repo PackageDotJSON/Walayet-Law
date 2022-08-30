@@ -10,7 +10,7 @@ import { IMAGES } from '../../settings/app.settings';
 export class HomeOneComponent {
   readonly routesUrl = {
     practiceUrl: ROUTE_URLS.PRACTICE_URL,
-    appointmentUrl: ROUTE_URLS.APPOINTMENT_URL
+    contactUrl: ROUTE_URLS.CONTACT_URL
   };
   images = IMAGES;
 }
